@@ -20,7 +20,9 @@ GROUP BY order_month, sal_ter.CountryRegionCode,Region
 
 )
 
-SELECT order_month, CountryRegionCode, Region, number_orders, number_customers, no_salesPersons, Total_w_tax, SUM(Total_w_tax) OVER (PARTITION BY CountryRegionCode, Region 
+SELECT order_month, CountryRegionCode, Region, number_orders, number_customers, no_salesPersons, Total_w_tax, SUM(Total_w_tax) OVER (
+
+PARTITION BY CountryRegionCode, Region 
 
 ORDER BY order_month
 
