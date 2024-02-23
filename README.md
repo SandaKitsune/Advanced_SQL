@@ -25,4 +25,4 @@ ORDER BY order_month
 ) AS Cumulative_Total_w_tax
 
 FROM sales_data
-ORDER BY CountryRegionCode,Region, order_month;
+ORDER BY CountryRegionCode, Region, order_month;
