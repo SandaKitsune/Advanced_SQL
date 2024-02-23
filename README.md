@@ -8,7 +8,6 @@ Examples:
 WITH sales_data AS (
 
 SELECT LAST_DAY((CAST(sal_ord_he.OrderDate as date)),month) AS order_month,sal_ter.CountryRegionCode AS CountryRegionCode, sal_ter.Name AS Region, COUNT(DISTINCT sal_ord_he.SalesOrderID) AS number_orders, COUNT(DISTINCT sal_ord_he.CustomerID) AS number_customers, COUNT(DISTINCT sal_ord_he.SalesPersonID) AS no_salesPersons, 
-
 ROUND(SUM(sal_ord_he.TotalDue)) AS Total_w_tax
 
 FROM `adwentureworks_db.salesorderheader` sal_ord_he
